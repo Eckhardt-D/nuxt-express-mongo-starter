@@ -1,0 +1,25 @@
+{
+  "name": "nuxt-express-mongo",
+  "version": "1.0.0",
+  "description": "A Nuxt x Express x Mongo starter.",
+  "main": "server/app.js",
+  "dependencies": {
+    "concurrently": "^4.1.2",
+    "cors": "^2.8.5",
+    "cross-env": "^6.0.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.1",
+    "mongoose": "^5.7.3"
+  },
+  "devDependencies": {
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.3"
+  },
+  "scripts": {
+    "prestart": "cd client && yarn generate",
+    "start": "cross-env NODE_ENV=production && node ./server/app",
+    "dev": "cross-env NODE_ENV=development concurrently \"cd ./client && yarn dev\" \"nodemon ./server/app\""
+  },
+  "author": "Kaizen Codes",
+  "license": "MIT"
+}
