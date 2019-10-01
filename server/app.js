@@ -29,8 +29,8 @@ app.use('/api', require('./hello/hello.routes'))
 app.use('*', (req, res) => 
   res.status(404).send('Uh oooh, couldn\'t find anything here.'))
 
-// Exposed port [set to process.env.PORT in production] 
-const PORT = 3001
+// Exposed port that generally works in prod. too
+const PORT = process.env.PORT || 3001
 
 app.listen(PORT, err => {
   if(err) throw new Error(err)
