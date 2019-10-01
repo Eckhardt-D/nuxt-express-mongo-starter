@@ -7,3 +7,5 @@ yarn start # builds Nuxt files and serves statically via Express
 ```
 
 > in dev the Nuxt app will reside on http://localhost:3000 and in production on http://localhost:3001 via Express.
+
+Remember to update `client/nuxt.config.js` if you want to change your axios baseURL.
